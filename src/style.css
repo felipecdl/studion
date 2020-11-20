@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #ffc500; /* variaveis sempre com -- no inicio */
+    font-family: 'Montserrat', sans-serif; /* Estilos de LETRAS */
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding-top: 7.75rem;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+
+.navbar { /* variaveis para clase */
+    position: fixed;
+    display: grid; 
+    grid-template-columns: 1fr 9fr;/* 2 colunas + tamanhos */
+    align-items: center;
+    top: 0;
+    left: 0;
+    
+    width: 100vw;
+    height: 7.75rem;
+    padding: 0 1rem; /* para cima e em baixo + para esquerda e direita */
+    
+    background-color: #000; /* COR FUNDO vermelho - verde - azul - 0 a f */
+    color: #fff; /* COR LETRAS */
+}
+
+.navbar__links { /* variaveis para clase */
+    justify-self: end; /* Alinhar na posicao - END a direita */
+}
+
+.navbar__links li {
+    font-size: 0.875rem; /* Tamanho da LETRAS menu topo direito */
+    margin-right: 0.625rem;
+    text-transform: uppercase; /* LETRAS para caixa alta na exibicao*/
+}
+
+.navbar__links a { /* A - pegando o elemento */
+    font-weight: 300;
+    color: #fff;
+    text-decoration: nine;
+}
+
+.navbar__links a:hover {
+    color: var(--color-primary);
+}
+
+.logo-studion {
+    font-size: 2.375rem;
+    font-weight: 900;
+    line-height: 1ch; /* Relativa tamanho da altura do glifo 0 da fonte */
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.logo-studion__subtitle {
+    font-size: 0.875rem;
+    font-weight: 300;
+    float: right;
+}
+
+.copy-primary {
+    color: var(--color-primary);
+}
