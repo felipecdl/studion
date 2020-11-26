@@ -5,9 +5,11 @@
 }
 
 :root {
-    --color-primary: #ffc500; /* variaveis sempre com -- no inicio */
+    
     font-family: 'Montserrat', sans-serif; /* Estilos de LETRAS */
     font-size: 16px;
+    --color-primary: #ffc500; /* variaveis sempre com -- no inicio */
+    --default-padding: 1rem;
 }
 
 body {
@@ -21,9 +23,9 @@ ul {
     padding-left: 0;
 }
 
-
 .navbar { /* variaveis para clase */
     position: fixed;
+    z-index: 1; /* nave bar por sima - barra de navegação*/
     display: grid; 
     grid-template-columns: 1fr 9fr;/* 2 colunas + tamanhos */
     align-items: center;
@@ -74,4 +76,66 @@ ul {
 
 .copy-primary {
     color: var(--color-primary);
+}
+
+#slider {
+    background-color: #000;
+    color: #fff;
+}
+
+.slide {
+    position: relative;
+    height: calc(100vh - 7.75rem);
+}
+
+.slide__background-image { /* trabalhando umagem frontal da cara com a mão*/
+    width: 100%; /* altura */
+    height: 100%; /* largura */
+    object-fit: cover;
+    object-position: center;
+}
+
+.slide__copy { /* texto sobre a imagem frontal*/
+    position: absolute;
+    top: 6.25rem;
+    left: 50vw;
+}
+
+.slide__copy h6 {
+    font-size: .9375rem;
+    font-weight: 400;
+    text-transform: uppercase; /* texto para caixa alta*/
+    letter-spacing: 0.1875rem;/* espassamento entre letras*/
+}
+
+.slide__copy h2 {
+    font-size: 6,25rem;
+    text-transform: uppercase;
+    line-height: 6,25rem;
+}
+
+.slide__copy h2 span {
+    display: block;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 1rem 2.5rem; /* trabalhando no tamanho do botao */
+    border: .125rem solid #fff;/* passar 3 valores > largura da linha > estilo > cor */
+    border-radius: 5rem; /* ablicar a propriedade na borda*/
+    color: var(--color-primary);
+    background: unset; /* removendo background prenchimento */
+    font-size: .9375rem; /* tamanho da fonte */
+    font-weight: 700;
+    text-transform: uppercase; /* todo em caixa auta */
+    transition: 15 all ease; /* animacao  - tempo > oque > curva de animacao */
+}
+
+/* editando layuot botao */
+.btn:hover,
+.btn:active,
+.btn:focus {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: #fff;
 }
