@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    
+    font-family: 'Montserrat', sans-serif; /* Estilos de LETRAS */
+    font-size: 16px;
+    --color-primary: #ffc500; /* variaveis sempre com -- no inicio */
+    --default-padding: 1rem;
+}
+
+body {
+    margin: 0;
+    padding-top: 7.75rem;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar { /* variaveis para clase */
+    position: fixed;
+    z-index: 1; /* nave bar por sima - barra de navegação*/
+    display: grid; 
+    grid-template-columns: 1fr 9fr;/* 2 colunas + tamanhos */
+    align-items: center;
+    top: 0;
+    left: 0;
+    
+    width: 100vw;
+    height: 7.75rem;
+    padding: 0 1rem; /* para cima e em baixo + para esquerda e direita */
+    
+    background-color: #000; /* COR FUNDO vermelho - verde - azul - 0 a f */
+    color: #fff; /* COR LETRAS */
+}
+
+.navbar__links { /* variaveis para clase */
+    justify-self: end; /* Alinhar na posicao - END a direita */
+}
+
+.navbar__links li {
+    font-size: 0.875rem; /* Tamanho da LETRAS menu topo direito */
+    margin-right: 0.625rem;
+    text-transform: uppercase; /* LETRAS para caixa alta na exibicao*/
+}
+
+.navbar__links a { /* A - pegando o elemento */
+    font-weight: 300;
+    color: #fff;
+    text-decoration: nine;
+}
+
+.navbar__links a:hover {
+    color: var(--color-primary);
+}
+
+.logo-studion {
+    font-size: 2.375rem;
+    font-weight: 900;
+    line-height: 1ch; /* Relativa tamanho da altura do glifo 0 da fonte */
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.logo-studion__subtitle {
+    font-size: 0.875rem;
+    font-weight: 300;
+    float: right;
+}
+
+.copy-primary {
+    color: var(--color-primary);
+}
+
+#slider {
+    background-color: #000;
+    color: #fff;
+}
+
+.slide {
+    position: relative;
+    height: calc(100vh - 7.75rem);
+}
+
+.slide__background-image { /* trabalhando umagem frontal da cara com a mão*/
+    width: 100%; /* altura */
+    height: 100%; /* largura */
+    object-fit: cover;
+    object-position: center;
+}
+
+.slide__copy { /* texto sobre a imagem frontal*/
+    position: absolute;
+    top: 6.25rem;
+    left: 50vw;
+}
+
+.slide__copy h6 {
+    font-size: .9375rem;
+    font-weight: 400;
+    text-transform: uppercase; /* texto para caixa alta*/
+    letter-spacing: 0.1875rem;/* espassamento entre letras*/
+}
+
+.slide__copy h2 {
+    font-size: 6,25rem;
+    text-transform: uppercase;
+    line-height: 6,25rem;
+}
+
+.slide__copy h2 span {
+    display: block;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 1rem 2.5rem; /* trabalhando no tamanho do botao */
+    border: .125rem solid #fff;/* passar 3 valores > largura da linha > estilo > cor */
+    border-radius: 5rem; /* ablicar a propriedade na borda*/
+    color: var(--color-primary);
+    background: unset; /* removendo background prenchimento */
+    font-size: .9375rem; /* tamanho da fonte */
+    font-weight: 700;
+    text-transform: uppercase; /* todo em caixa auta */
+    transition: 15 all ease; /* animacao  - tempo > oque > curva de animacao */
+}
+
+/* editando layuot botao */
+.btn:hover,
+.btn:active,
+.btn:focus {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: #fff;
+}
