@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Roboto&display=swap');
 * {
     box-sizing: border-box;
 }
@@ -8,13 +7,25 @@
     
     font-family: 'Montserrat', sans-serif; /* Estilos de LETRAS */
     font-size: 16px;
+    --color-copy: #333;
     --color-primary: #ffc500; /* variaveis sempre com -- no inicio */
     --default-padding: 1rem;
+    color: var(--color-copy);
 }
 
 body {
     margin: 0;
     padding-top: 7.75rem;
+}
+header,
+main,
+footer {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1140px; /* larguta maxima do elemento - sera o container que todo o site fique dentro no meio */
+    margin: 0 auto;
 }
 
 ul {
@@ -26,18 +37,22 @@ ul {
 .navbar { /* variaveis para clase */
     position: fixed;
     z-index: 1; /* nave bar por sima - barra de navegação*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000; /* COR FUNDO vermelho - verde - azul - 0 a f */
+    color: #fff; /* COR LETRAS */
+}
+
+.navbar__container {
     display: grid; 
     grid-template-columns: 1fr 9fr;/* 2 colunas + tamanhos */
     align-items: center;
-    top: 0;
-    left: 0;
-    
+        
     width: 100vw;
     height: 7.75rem;
     padding: 0 1rem; /* para cima e em baixo + para esquerda e direita */
     
-    background-color: #000; /* COR FUNDO vermelho - verde - azul - 0 a f */
-    color: #fff; /* COR LETRAS */
 }
 
 .navbar__links { /* variaveis para clase */
@@ -121,21 +136,86 @@ ul {
 .btn {
     cursor: pointer;
     padding: 1rem 2.5rem; /* trabalhando no tamanho do botao */
-    border: .125rem solid #fff;/* passar 3 valores > largura da linha > estilo > cor */
+    border: 0.125rem solid #fff;/* passar 3 valores > largura da linha > estilo > cor */
     border-radius: 5rem; /* ablicar a propriedade na borda*/
     color: var(--color-primary);
     background: unset; /* removendo background prenchimento */
-    font-size: .9375rem; /* tamanho da fonte */
+    font-size: 0.9375rem; /* tamanho da fonte */
     font-weight: 700;
     text-transform: uppercase; /* todo em caixa auta */
-    transition: 15 all ease; /* animacao  - tempo > oque > curva de animacao */
+    transition: 0,3 all ease; /* animacao  - tempo > oque > curva de animacao */
 }
 
 /* editando layuot botao */
 .btn:hover,
 .btn:active,
-.btn:focus {
+.btn:focus, 
+.btn-institutional {
     border-color: var(--color-primary);
     background-color: var(--color-primary);
     color: #fff;
+}
+
+#counter {
+    background-color: var(--color-primary);
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.counter__container {
+    display: grid; /* linhas interligada ncom a linha a baixo*/
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* colunas altomaticas e tamanho do minimo ao maximo */
+    place-items: center;
+    padding: 4.375rem 1rem; /* descendo texto e centralizando */
+}
+
+.counter__container h3 {
+    font-size: 2.1875rem;
+}
+
+.counter__container h3 small {
+    display: block;
+    font-size: 1.25rem;
+}
+
+.institutional {
+    display: grid;
+    grid-template-columns: auto auto; /* 2 colunas com tamanhos altomaticos */
+    gap: 3.125rem; /* separação de conteudo */
+    align-items: center;
+    padding: 4.375rem;
+}
+
+.institutional__image {
+    max-width: 550px;
+}
+
+.institutional__copy {
+    padding: 1.875rem 1rem
+}
+
+.institutional__copy h6 { /* trabalhando no texto */
+    font-size: 0.875rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    margin: 0; /* removendo margin */
+}
+
+.institutional__copy h4 {
+    font-size: 1.5625;
+    margin-top: 1rem;
+}
+
+.institutional p {
+    font-family: 'roboto', sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.6875rem; /* tamanho de fonto */
+    margin-bottom: 0;
+    margin-bottom: 2.5rem;
+}
+
+.btn-institutional:hover {
+    color: var(--color-copy);
+    background: unset;
 }
